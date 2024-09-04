@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Paleta de colores */
+:root {
+    --color-primario: #204450;
+    --color-secundario: #599f9a;
+    --color-accento: #59bb9c;
+    --color-texto: #333333;
+    --color-fondo: #aafbbbf;
+    --color-blanco: #FFFFFF;
+    --color-footer: #7a959e;
+    --color-borde: #CCCCCC;
+}
+
+/* Tipografía */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-texto);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Barra de navegación */
+/* Estilo para el contenedor de la navegación */
+nav {
+    background-color: var(--color-primario);
+    padding: 15px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacia el logo y el menú de navegación */
+    max-width: 1200px; /* Ajusta según el ancho máximo deseado */
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+.logo img {
+   
+        height: 100px;
+  
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 15px; /* Espaciado entre los enlaces del menú */
+}
+
+.nav-menu a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--color-secundario);
+}
+.nav-menu .active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-accento);
+    color: #4dbd77; /* Subraya el enlace activo */
+}
+
+
+/* Sección Hero */
+.hero-section {
+    background: url(../imagenes/paginainicio.jpg) no-repeat center center;
+    background-size: cover;
+    color: var(--color-blanco);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .btn {
+    font-size: 1.25rem;
+    padding: 10px 20px;
+    background-color: var(--color-accento);
+    border: none;
+    color: var(--color-blanco);
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.hero-section .btn:hover {
+    background-color: #4dbd77; /* Ajustado a un tono más oscuro de acento */
+}
+
+
+
+
+
+/*  */
+
+.details-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.details-content {
+    text-align: center;
+}
+
+.details-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.details-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.details-list li {
+    margin: 10px 0;
+}
+
+.contact-link {
+    color: #0044cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.enlace {
+    text-decoration: none;
+    background-color: var(--color-accento);
+    display: inline-block;
+    padding: 13px 25px;
+    color: #dfdde0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-top: 55px;
+}
+
+/* Estilo del Footer */
+.footer {
+    border-top: 1px solid #ba815065;
+    padding: 50px 0;
+    background-color: var(--color-primario);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+
+.link {
+    flex: 1 1 200px; 
+    margin: 0 15px; 
+    box-sizing: border-box;
+   
+}
+
+
+.link h3 {
+    font-size: 22px;
+    color: #dfdded; 
+    margin-bottom: 10px;
+}
+
+.link ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; 
+}
+
+.link li {
+    margin-bottom: 10px;
+}
+
+.link a {
+    font-size: 16px;
+    color: var(--color-blanco);
+    text-decoration: none; 
+}
+
+.link a:hover {
+    color: var(--color-secundario); 
+}
+
+.social-links a img {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.social-links a img:hover {
+    filter: grayscale(0%);
+}
+
+.navbar-container {
+    margin: 50px;
+    width: 100%;
+    
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.navbar1 ul {
+  
+    list-style: none;
+    padding: 0;
+    display: inline-block; 
+}
+
+.navbar1 ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.navbar1 ul li a {
+    text-decoration: none;
+    color: #c0c0c1;
+    font-weight: bold;
+}
+.navbar1 ul li a:hover {  
+    color: var(--color-secundario); 
+} 
+.navbar1 ul li a.active {  
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-accento);
+    color: #4dbd77; /* Subraya el enlace activo */
+}
+
+
+.copyright-container {
+    width: 100%;
+    text-align: center;
+}
+
+.copyright p {
+    margin: 0;
+    font-size: 14px;
+    color: #c0c0c1;
+}
+

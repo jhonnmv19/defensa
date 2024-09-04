@@ -1,0 +1,870 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Paleta de colores */
+:root {
+    --color-primario: #204450;
+    --color-secundario: #599f9a;
+    --color-accento: #59bb9c;
+    --color-texto: #333333;
+    --color-fondo: #aafbbbf;
+    --color-blanco: #FFFFFF;
+    --color-footer: #7a959e;
+    --color-borde: #CCCCCC;
+}
+
+/* Tipografía */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-texto);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: var(--color-primario);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--color-secundario);
+}
+
+.nav-menu .active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-accento);
+    color: #4dbd77;
+}
+
+
+/* Sección Hero */
+.hero-section {
+    background: url(../imagenes/paginainicio.jpg) no-repeat center center;
+    background-size: cover;
+    color: var(--color-blanco);
+    padding: 100px 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .btn {
+    font-size: 1.25rem;
+    padding: 10px 20px;
+    background-color: var(--color-accento);
+    border: none;
+    color: var(--color-blanco);
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.hero-section .btn:hover {
+    background-color: #4dbd77; /* Ajustado a un tono más oscuro de acento */
+}
+
+/* Estilo para la sección de Beneficios */
+.benefits-section {
+    padding: 60px 20px;
+    background-color: var(--color-fondo);
+}
+
+.benefits-section h2 {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 40px;
+}
+
+.benefits-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola línea */
+    gap: 20px; /* Espacio entre columnas */
+    justify-content: center; /* Centra los elementos */
+}
+
+.benefit-item {
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center; /* Centra el texto dentro de cada elemento */
+}
+
+.benefit-item img {
+    margin-bottom: 10px;
+}
+
+.benefit-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.benefit-item p {
+    font-size: 1rem;
+}
+
+/* Estilo para la sección de Testimonios */
+.testimonials-section {
+    padding: 60px 20px;
+    background-color: var(--color-blanco);
+}
+
+.testimonials-section h2 {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 40px;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-direction: column; /* Apila los testimonios verticalmente */
+    gap: 20px; /* Espacio entre testimonios */
+    align-items: center; /* Centra los testimonios */
+}
+
+.testimonial-item {
+    background-color: var(--color-fondo);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Estilo para la sección de Actualizaciones */
+.updates-section {
+    padding: 60px 20px;
+    background-color: var(--color-fondo);
+}
+
+.updates-section h2 {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 40px;
+}
+
+.updates-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre actualizaciones */
+    justify-content: center;
+}
+
+.update-item {
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.update-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.update-item p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.update-item a {
+    text-decoration: none;
+    color: var(--color-accento);
+    font-weight: bold;
+}
+
+/* Estilo para la sección de Información */
+.info-section {
+    padding: 60px 20px;
+    background-color: var(--color-blanco);
+}
+
+.info-section h2 {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 40px;
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.info-item {
+    background-color: var(--color-fondo);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.info-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    font-size: 1rem;
+    text-align: justify; /* Justifica el texto */
+}
+
+
+.info-section {
+    padding: 60px 20px;
+    background-color: var(--color-fondo);
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si el espacio es limitado */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+.info-item {
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 40px); /* Tres columnas, ajusta el tamaño según el espacio disponible */
+    margin: 10px; /* Espacio entre las columnas */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    text-align: center; /* Centra el texto dentro de cada columna */
+}
+
+.info-item h2 {
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    font-size: 1rem;
+    color: var(--color-texto);
+}
+
+
+/* Sección Sobre Nosotros */
+#nosotros {
+    background-color: var(--color-fondo);
+    padding: 60px 20px;
+}
+
+#nosotros img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.nosotros-text {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Sección Servicios */
+#servicios {
+    padding: 60px 20px;
+    background-color: var(--color-blanco);
+}
+
+.servicios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 300px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    border-bottom: 1px solid var(--color-borde);
+    background-color: var(--color-secundario);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.card a {
+    text-decoration: none;
+    background-color: var(--color-accento);
+    display: inline-block;
+    padding: 13px 25px;
+    color: #dfdde0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-top: 55px;
+}
+
+
+.card .img-card {
+    background: url(../imagenes/seguros_para_ti_auto.jpg);
+    width: 40%;
+    height: 100%;
+    background-size: cover;
+}
+
+.card .content {
+    width: 60%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50px 150px 50px;
+    padding: 10px 15px;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: var(--color-primario);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinea el logo y el menú de navegación */
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+.logo img {
+    height: 100px; /* Ajusta la altura del logo según tu diseño */
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--color-secundario);
+}
+
+/* Sección Contacto */
+#contacto {
+    padding: 60px 20px;
+    background-color: var(--color-fondo);
+}
+
+.contacto-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si el espacio es limitado */
+    gap: 20px; /* Espacio entre el formulario y la información de contacto */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+.contacto-form,
+.contacto-info {
+    flex: 1;
+    max-width: 100%; /* Asegura que el contenido no se desborde */
+}
+
+.contacto-info h2,
+.contacto-info h3 {
+    margin-top: 0;
+}
+
+.contacto-info ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espacio entre los logos de redes sociales */
+}
+
+.contacto-info ul li {
+    display: inline;
+}
+
+.contacto-info ul li a {
+    display: block;
+}
+
+.contacto-info ul li img {
+    width: 50px; /* Ajusta el ancho del logo según tu diseño */
+    height: auto; /* Mantiene la proporción del logo */
+    transition: opacity 0.3s;
+}
+
+.contacto-info ul li img:hover {
+    opacity: 0.7; /* Efecto de hover para los logos */
+}
+
+/* Estilo del formulario */
+form {
+    background-color: var(--color-blanco);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-secundario);
+}
+
+.btn-primary {
+    background-color: var(--color-secundario);
+    border: none;
+    color: var(--color-blanco);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: auto;
+}
+
+.btn-primary:hover {
+    background-color: #477b6b; /* Ajustado a un tono más oscuro de secundario */
+}
+
+/* Estilos específicos para la sección de Puntos de Atención */
+.puntos-atencion {
+    padding: 60px 20px;
+    background-color: var(--color-fondo);
+}
+
+.puntos-atencion h1 {
+    font-size: 2rem;
+    color: var(--color-primario);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.puntos-atencion-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.punto {
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.punto-titulo {
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+
+
+/* Estilo para pagar el seguro */
+
+/* Estilos para la Página de Pago de Seguro */
+.paga-seguro {
+    background-color: var(--color-fondo);
+    padding: 60px 20px;
+    text-align: center;
+    display: none; /* Oculto por defecto */
+}
+
+.paga-seguro-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-blanco);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.paga-seguro h1 {
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom: 20px;
+}
+
+.paga-seguro p {
+    font-size: 1.2rem;
+    color: var(--color-texto);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--color-secundario);
+}
+
+.btn-primary {
+    background-color: var(--color-secundario);
+    border: none;
+    color: var(--color-blanco);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.btn-primary:hover {
+    background-color: #477b6b; /* Ajustado a un tono más oscuro de secundario */
+}
+
+/* Estilos para la Sección de Inicio de Sesión */
+.login {
+    background-color: var(--color-fondo);
+    padding: 60px 20px;
+    text-align: center;
+    display: none; /* Oculto por defecto */
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: var(--color-blanco);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login h1 {
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom: 20px;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login .form-group {
+    margin-bottom: 15px;
+}
+
+.login .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.login .form-group input:focus {
+    border-color: var(--color-secundario);
+}
+
+.login .btn-primary {
+    background-color: var(--color-secundario);
+    border: none;
+    color: var(--color-blanco);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login .btn-primary:hover {
+    background-color: #477b6b; /* Ajustado a un tono más oscuro de secundario */
+}
+
+
+/* Estilo del Footer */
+.footer {
+    border-top: 1px solid #ba815065;
+    padding: 50px 0;
+    background-color: var(--color-primario);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+
+.link {
+    flex: 1 1 200px; 
+    margin: 0 15px; 
+    box-sizing: border-box;
+   
+}
+
+
+.link h3 {
+    font-size: 22px;
+    color: #dfdded; 
+    margin-bottom: 10px;
+}
+
+.link ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; 
+}
+
+.link li {
+    margin-bottom: 10px;
+}
+
+.link a {
+    font-size: 16px;
+    color: var(--color-blanco);
+    text-decoration: none; 
+}
+
+.link a:hover {
+    color: var(--color-secundario); 
+}
+
+.social-links a img {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.social-links a img:hover {
+    filter: grayscale(0%);
+}
+
+.navbar-container {
+    margin: 50px;
+    width: 100%;
+    
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.navbar1 ul {
+  
+    list-style: none;
+    padding: 0;
+    display: inline-block; 
+}
+
+.navbar1 ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.navbar1 ul li a {
+    text-decoration: none;
+    color: #c0c0c1;
+    font-weight: bold;
+}
+.navbar1 ul li a:hover {  
+    color: var(--color-secundario); 
+} 
+.navbar1 ul li a.active {  
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-accento);
+    color: #4dbd77; /* Subraya el enlace activo */
+}
+
+
+.copyright-container {
+    width: 100%;
+    text-align: center;
+}
+
+.copyright p {
+    margin: 0;
+    font-size: 14px;
+    color: #c0c0c1;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+       display: none;
+
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0;
+    }
+
+    .nav-menu a {
+        padding: 15px;
+        display: block; /* Asegúrate de que el enlace ocupe toda la anchura del elemento de lista */
+    }
+
+    .nav-menu li + li a {
+        margin-top: 10px; /* Añade separación entre los elementos del menú */
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
